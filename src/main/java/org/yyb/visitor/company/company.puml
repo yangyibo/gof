@@ -1,0 +1,29 @@
+@startuml
+
+interface Visitor
+class CEOVisitor
+class CTOVisitor
+
+abstract class Staff
+class Engineer
+class Manager
+
+class Client
+class BusinessReport
+
+
+Visitor <|-- CEOVisitor
+Visitor <|-- CTOVisitor
+
+Staff <|-- Engineer
+Staff <|-- Manager
+
+
+Client ..> BusinessReport
+Client ..> Visitor
+BusinessReport o-- Staff
+Visitor -- Staff
+
+
+
+@enduml

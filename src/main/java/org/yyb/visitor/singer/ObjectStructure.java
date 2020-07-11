@@ -1,4 +1,4 @@
-package org.yyb.visitor;
+package org.yyb.visitor.singer;
 
 import java.util.LinkedList;
 import java.util.List;

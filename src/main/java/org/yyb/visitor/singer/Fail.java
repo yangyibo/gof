@@ -1,4 +1,4 @@
-package org.yyb.visitor;
+package org.yyb.visitor.singer;
 
 public class Fail extends Action {
     @Override
