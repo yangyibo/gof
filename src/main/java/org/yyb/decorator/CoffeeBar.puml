@@ -1,0 +1,54 @@
+@startuml
+
+abstract class Drink {
++ des: String
++ price: float
+}
+
+class Coffee {
+}
+
+class Decorator {
+}
+
+Drink <|-- Coffee
+Drink <|-- Decorator
+
+class ShortBlack {
+}
+
+class LongBlack {
+}
+
+class Espresso {
+}
+
+Coffee <|-- ShortBlack
+Coffee <|-- LongBlack
+Coffee <|-- Espresso
+
+class Milk {
+}
+
+class Chocolate {
+}
+
+class Soy {
+}
+
+Decorator <|-- Milk
+Decorator <|-- Chocolate
+Decorator <|-- Soy
+
+
+CoffeeBar ..> Drink
+CoffeeBar ..> ShortBlack
+CoffeeBar ..> LongBlack
+CoffeeBar ..> Espresso
+
+CoffeeBar ..> Milk
+CoffeeBar ..> Chocolate
+CoffeeBar ..> Soy
+
+
+@enduml
